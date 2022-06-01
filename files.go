@@ -19,8 +19,3 @@ func FileExists(filePath string) bool {
 func CreateDir(filePath string) error {
 	return os.Mkdir(filePath, os.ModePerm)
 }
-
-func CreateFile(filePath string) error {
-	_, err := os.Create(filePath)
-	return err
-}

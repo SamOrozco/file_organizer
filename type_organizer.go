@@ -14,6 +14,11 @@ func (t TypeOrganizer) Organize(file os.FileInfo, rootLocation string) error {
 	origLocation := rootLocation + SeparatorString + file.Name()
 	extension := filepath.Ext(origLocation)
 
+	// safely set extension
+	if len(extension) < 1 {
+		extension = "uunknown"
+	}
+
 	// create file if not exists
 	extensionLoc := rootLocation + SeparatorString + extension[1:] + t.FolderSuffix
 	if err := CreateDirIfNotExists(extensionLoc); err != nil {

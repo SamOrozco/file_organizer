@@ -30,3 +30,17 @@ for the extension type.
 ## Organize by type and date
 Organizing by type and date or `-l` will put all files into a type sub folder and then put the files further into sub folders for the date they are moved.
 
+
+# Usage
+
+Basic usage for the Downloads folder that will organize by type.
+```shell
+fo /Users/samuel/Downloads -t
+```
+
+Basic type organization with exclusion. Organize by type but exclude any files with the extension ".jfr".
+
+The regex for excluding ".jfr" files = .+\.jfr
+```shell
+fo /Users/samuel/Downloads -t -x=".+\.jfr"
+```

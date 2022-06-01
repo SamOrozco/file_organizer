@@ -22,13 +22,31 @@ Flags:
 ## Organize by type
 Organizing the directory by type or `-t` will put all files in the folder into sub folders based on their file extension. 
 If the file extension is empty or unknown the value "unknown" will be used. 
+```
+* Downloads
+  * jfr_files
+  * txt_files
+```
 
 ## Organize by date and type
 Organizing by date and type or `-d` will put all files into a date sub folder(for the date they are moved) and then sub folders in that
-for the extension type. 
+for the extension type.
+```
+* Downloads
+  * 2022-05-31-Tuesday
+    * jfr_files
+    * txt_files
+```
 
 ## Organize by type and date
 Organizing by type and date or `-l` will put all files into a type sub folder and then put the files further into sub folders for the date they are moved.
+```
+* Downloads
+  * jfr_files
+    * 2022-05-31-Tuesday
+  * txt_files
+    * 2022-05-31-Tuesday
+```
 
 
 # Usage
